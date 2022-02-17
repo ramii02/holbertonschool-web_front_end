@@ -1,0 +1,13 @@
+/* Mixing margins */
+@mixin margins($val) {
+    margin-left: $val;
+    margin-right: $val;
+  }
+  
+  body {
+    @include margins(10px);
+  }
+  
+  div {
+    @include margins(15px);
+  }
