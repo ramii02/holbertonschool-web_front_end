@@ -5,41 +5,55 @@
 
         <meta charset="utf-8" />
         <title>Task 4</title>
-		<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-		<script type="application/javascript">
-			window.onload = function run() {
-				createFamilyTree();
-				replaceFamilyTree();
-			};
-
-			function createFamilyTree() {
-				$("body").append("<table></table>");
-				$("table").append("<thead></thead>");
-				$("thead").append("<tr></tr>");
-				$("tr").append("<th></th>", "<th></th>");
-				$("th").eq(0).text("Firstname");
-				$("th").eq(1).text("Lastname");
-				$("table").append("<tbody></tbody");
-				$("tbody").append("<tr></tr>", "<tr></tr>", "<tr></tr>");
-				$("tbody tr").append("<td></td>", "<td></td>");
-				$("tbody tr td").eq(0).text("Guillaume");
-				$("tbody tr td").eq(1).text("Salva");
-				$("tbody tr td").eq(2).text("Paulette");
-				$("tbody tr td").eq(3).text("Salva");
-				$("tbody tr td").eq(4).text("Antoine");
-				$("tbody tr td").eq(5).text("Salva");
-			}
-
-			function replaceFamilyTree() {
-				$("tbody").html("<tr><td>Gerard</td><td>Bonissa</td></tr>");
-			}
-
-		</script>
-		
+        <script
+			  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+			  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+              crossorigin="anonymous">
+        </script>
+        
     </head>
 
     <body>
-
+        <script type="application/javascript">
+            $( document ).ready(function() {
+                function createFamilyTree() {
+                    $("body").append(
+                        `<table>
+                            <thead>
+                                <tr>
+                                    <th>Firstname</th>
+                                    <th>Lastname</th>
+                                </tr>
+                            </head>
+                            <tbody>
+                                <tr>
+                                    <td>Guillaume</td>
+                                    <td>Salva</td>
+                                </tr>
+                                <tr>
+                                    <td>Paulette</td>
+                                    <td>Salva</td>
+                                </tr>
+                                <tr>
+                                    <td>Antoine</td>
+                                    <td>Salva</td>
+                                </tr>
+                            </tbody>
+                        </table>`
+                    );
+                }
+                function replaceFamilyTree() {
+                    $("tbody").html(`
+                        <tr>
+                            <td>Gerard</td>
+                            <td>Bonissa</td>
+                        </tr>
+                    `);
+                }
+                createFamilyTree();
+                replaceFamilyTree();
+            });
+        </script>
     </body>
 
 </html>
